@@ -1,0 +1,24 @@
+{
+  "name": "Cloud SQL for MySQL",
+  "version": "0.1.0",
+  "description": "Connect to Cloud SQL for MySQL",
+  "mcpServers": {
+    "Cloud SQL for MySQL": {
+      "command": "${extensionPath}${/}toolbox",
+      "args": [
+        "--prebuilt",
+        "cloud-sql-mysql",
+        "--stdio"
+      ],
+      "env": {
+        "CLOUD_SQL_MYSQL_PROJECT": "${CLOUD_SQL_MYSQL_PROJECT}",
+        "CLOUD_SQL_MYSQL_REGION": "${CLOUD_SQL_MYSQL_REGION}",
+        "CLOUD_SQL_MYSQL_INSTANCE": "${CLOUD_SQL_MYSQL_INSTANCE}",
+        "CLOUD_SQL_MYSQL_DATABASE": "${CLOUD_SQL_MYSQL_DATABASE}",
+        "CLOUD_SQL_MYSQL_USER": "${CLOUD_SQL_MYSQL_USER}",
+        "CLOUD_SQL_MYSQL_PASSWORD": "${CLOUD_SQL_MYSQL_PASSWORD}"
+      }
+    }
+  },
+  "contextFileName": "CLOUD-SQL-MYSQL.md"
+}
