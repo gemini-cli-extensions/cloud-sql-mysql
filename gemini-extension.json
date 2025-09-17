@@ -1,7 +1,7 @@
 {
   "name": "cloud-sql-mysql",
   "version": "0.1.0",
-  "description": "Connect to Cloud SQL for MySQL",
+  "description": "Connect and interact with a Cloud SQL for MySQL database and data",
   "mcpServers": {
     "Cloud SQL for MySQL": {
       "command": "${extensionPath}${/}toolbox",
