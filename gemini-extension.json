@@ -1,5 +1,5 @@
 {
-  "name": "Cloud SQL for MySQL",
+  "name": "cloud-sql-mysql",
   "version": "0.1.0",
   "description": "Connect to Cloud SQL for MySQL",
   "mcpServers": {
