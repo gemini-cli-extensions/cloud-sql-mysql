@@ -36,6 +36,9 @@ Set the following environment variables before starting the Gemini CLI:
 * `CLOUD_SQL_MYSQL_USER`: The database username.
 * `CLOUD_SQL_MYSQL_PASSWORD`: The password for the database user.
 
+> [!NOTE]
+> When using private IPs with Cloud SQL for MySQL, you must use a Virtual Private Cloud (VPC) network.
+
 ## Usage Examples
 
 Interact with MySQL using natural language right from your IDE:
