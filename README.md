@@ -52,8 +52,12 @@ Interact with MySQL using natural language:
 
 ## Supported Tools
 
-* `list-tables`: Use this tool to list tables and descriptions.
-* `execute-sql`: Use this tool to execute any SQL statement.
+*  `list_tables`: Use this tool to list tables and descriptions.
+*  `execute_sql`: Use this tool to execute any SQL statement.
+*  `get_query_plan`: Use this tool to generate an execution plan. 
+*  `list_active_queries`: Use this tool to lists top N (default 10) ongoing queries.
+*  `list_tables_missing_unique_indexes`: Use this tool to find tables that do not have primary or unique key constraint
+*  `list_table_fragmentation`: Use this tool to list fragmented tables
 
 ## Additional Extensions
 
