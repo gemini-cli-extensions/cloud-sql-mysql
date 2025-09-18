@@ -1,6 +1,6 @@
 # Gemini CLI Extension - Cloud SQL for MySQL
 
-This Gemini CLI extension provides a set of tools to interact with [Cloud SQL for MySQL](https://cloud.google.com/sql/docs/mysql) instances. It allows you to manage your databases, execute queries, and explore schemas directly from the [Gemini CLI](https://google-gemini.github.io/gemini-cli/), using natural language prompts.
+This Gemini CLI extension provides a set of tools to interact with [Cloud SQL for MySQL](https://cloud.google.com/sql/docs/mysql) instances. It allows you to manage your databases, execute queries, explore schemas, and troubleshoot issues directly from the [Gemini CLI](https://google-gemini.github.io/gemini-cli/), using natural language prompts.
 
 ## Why Use the Cloud SQL for MySQL Extension?
 
@@ -41,7 +41,7 @@ Set the following environment variables before starting the Gemini CLI:
 
 ## Usage Examples
 
-Interact with MySQL using natural language right from your IDE:
+Interact with MySQL using natural language:
 
 * **Explore Schemas and Data:**
   * "Show me all tables in the 'orders' database."
