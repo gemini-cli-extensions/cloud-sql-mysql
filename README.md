@@ -17,6 +17,8 @@ Before you begin, ensure you have the following:
 * A Google Cloud project with the **Cloud SQL Admin API** enabled.
 * IAM Permissions:
   * Cloud SQL Client (`roles/cloudsql.client`)
+  * Cloud SQL Viewer (`roles/cloudsql.viewer`)
+  * Cloud SQL Admin (`roles/cloudsql.admin`)
 
 ## Installation
 
