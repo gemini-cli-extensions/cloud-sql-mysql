@@ -33,7 +33,8 @@ gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-mys
 
 ## Configuration
 
-Set the following environment variables before starting the Gemini CLI:
+Set the following environment variables before starting the Gemini CLI. 
+This configuration is not required if utilizing the [Admin toolset](#supported-tools).
 
 * `CLOUD_SQL_MYSQL_PROJECT`: The GCP project ID.
 * `CLOUD_SQL_MYSQL_REGION`: The region of your Cloud SQL instance.
