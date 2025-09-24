@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "description": "Connect and interact with a Cloud SQL for MySQL database and data",
   "mcpServers": {
+    "Cloud SQL for MySQL Admin": {
+      "command": "${extensionPath}${/}toolbox",
+      "args": [
+        "--prebuilt",
+        "cloud-sql-mysql-admin",
+        "--stdio"
+      ]
+    },
     "Cloud SQL for MySQL": {
       "command": "${extensionPath}${/}toolbox",
       "args": [
