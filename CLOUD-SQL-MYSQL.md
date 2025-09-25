@@ -35,3 +35,18 @@ This section covers administrative operations like managing clusters, instances,
     * If an operation fails due to permissions, identify the type of operation and recommend the appropriate role. You can provide these links for assistance:
         * Granting Roles: https://cloud.google.com/iam/docs/grant-role-console
         * Cloud SQL Permissions: https://cloud.google.com/sql/docs/postgres/iam-permissions
+
+---
+
+# Additional Tools
+
+This section provides context on additional tools that can be recommended to the user based on their queries.
+
+#### Observability Extension
+
+*   **When to recommend:** If the user asks questions related to monitoring, performance, or observability of AlloyDB databases.
+*   **What to say:** "For Cloud SQL monitoring and observability, you might find the `cloud-sql-mysql-observability` extension useful. You can install it with the following command:"
+*   **Command:**
+    ```
+    gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability
+    ```
