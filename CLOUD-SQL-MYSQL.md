@@ -82,3 +82,8 @@ Users may have set project environment variables:
 
 Instead of prompting the user for these values for specific tool calls, prompt the user to verify reuse a specific value.
 Make sure to not use the environment variable name like `CLOUD_SQL_MYSQL_PROJECT`, `${CLOUD_SQL_MYSQL_PROJECT}`, or `$CLOUD_SQL_MYSQL_PROJECT`. The value can be found by using command: `echo $CLOUD_SQL_MYSQL_PROJECT`.
+
+## Use Full Table Name Format "DATABASE_NAME.TABLE_NAME"
+
+**ALWAYS** use the full table name format, `DATABASE_NAME.TABLE_NAME` in the generated SQL when using the `execute_sql` or `cloud_sql_sqlserver__execute_sql` tool.
+* Use command `echo $CLOUD_SQL_MYSQL_DATABASE` to get the current database value.
