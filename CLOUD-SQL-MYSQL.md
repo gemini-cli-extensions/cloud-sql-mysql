@@ -85,5 +85,5 @@ Make sure to not use the environment variable name like `CLOUD_SQL_MYSQL_PROJECT
 
 ## Use Full Table Name Format "DATABASE_NAME.TABLE_NAME"
 
-**ALWAYS** use the full table name format, `DATABASE_NAME.TABLE_NAME` in the generated SQL when using the `execute_sql` or `cloud_sql_sqlserver__execute_sql` tool.
+**ALWAYS** use the full table name format, `DATABASE_NAME.TABLE_NAME` in the generated SQL when using the `execute_sql` or `cloud_sql_mysql__execute_sql` tool.
 * Use command `echo $CLOUD_SQL_MYSQL_DATABASE` to get the current database value.
