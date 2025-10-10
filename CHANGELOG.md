@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.1...0.1.2) (2025-10-10)
+
+
+### Features
+
+* add full table name to context file ([#34](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/34)) ([2e5337a](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/2e5337ab1aa1991104772fa6ecce94c3fc3931cb))
+
 ## [0.1.1](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.0...0.1.1) (2025-09-30)
 
 
