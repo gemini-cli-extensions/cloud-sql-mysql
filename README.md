@@ -44,7 +44,7 @@ This configuration is not required if utilizing the [Admin toolset](#supported-t
 * `CLOUD_SQL_MYSQL_DATABASE`: The name of the database to connect to.
 * `CLOUD_SQL_MYSQL_USER`: The database username.
 * `CLOUD_SQL_MYSQL_PASSWORD`: The password for the database user.
-* `CLOUD_SQL_MYSQL_IP_TYPE`: (Optional) The IP type i.e. “Public” or “Private” (Default: Public).
+* `CLOUD_SQL_MYSQL_IP_TYPE`: (Optional) The IP type i.e. “Public”, “Private”, or "PSC" (Default: Public).
 
 Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 
