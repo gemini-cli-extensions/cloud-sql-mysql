@@ -5,6 +5,13 @@
 
 This Gemini CLI extension provides a set of tools to interact with [Cloud SQL for MySQL](https://cloud.google.com/sql/docs/mysql) instances. It allows you to manage your databases, execute queries, explore schemas, and troubleshoot issues directly from the [Gemini CLI](https://google-gemini.github.io/gemini-cli/), using natural language prompts.
 
+Learn more about [Gemini CLI Extensions](https://github.com/google-gemini/gemini-cli/blob/main/docs/extensions/index.md).
+> [!IMPORTANT]
+> **We Want Your Feedback!**
+> Please share your thoughts with us by filling out our feedback [form][form]. 
+> Your input is invaluable and helps us improve the project for everyone.
+
+[form]: https://docs.google.com/forms/d/e/1FAIpQLSfEGmLR46iipyNTgwTmIDJqzkAwDPXxbocpXpUbHXydiN1RTw/viewform?usp=pp_url&entry.157487=cloud-sql-mysql
 ## Why Use the Cloud SQL for MySQL Extension?
 
 * **Seamless Workflow:** As a Google-developed extension, it integrates seamlessly into the Gemini CLI environment. No need to constantly switch contexts for common database tasks.
@@ -12,12 +19,15 @@ This Gemini CLI extension provides a set of tools to interact with [Cloud SQL fo
 * **Full Lifecycle Control:** Manage the entire lifecycle of your database, from creating instances to exploring schemas and running queries.
 * **Code Generation:** Accelerate development by asking Gemini to generate data classes and other code snippets based on your table schemas.
 
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
 
 * [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed with version **+v0.6.0**.
+* Setup Gemini CLI [Authentication](https://github.com/google-gemini/gemini-cli/tree/main?tab=readme-ov-file#-authentication-options).
 * A Google Cloud project with the **Cloud SQL Admin API** enabled.
+* Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 * IAM Permissions:
   * Cloud SQL Client (`roles/cloudsql.client`)
   * Cloud SQL Viewer (`roles/cloudsql.viewer`)
@@ -35,7 +45,7 @@ gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-mys
 
 ### Configuration
 
-Set the following environment variables before starting the Gemini CLI.
+Set the following environment variables before starting the Gemini CLI. These variables can be loaded from a `.env` file.
 This configuration is not required if utilizing the [Admin toolset](#supported-tools).
 
 * `CLOUD_SQL_MYSQL_PROJECT`: The GCP project ID.
@@ -80,7 +90,7 @@ Interact with MySQL using natural language:
 
 ## Supported Tools
 
-*   **Admin:**
+* **Admin:**
    	* `create_instance`: Use this tool to create an Postgres instance.
    	* `create_user`: Use this tool to create Postgres-BUILT-IN or IAM-based users.
    	* `get_instance`: Use this tool to get details about an Postgres instance.
@@ -89,7 +99,7 @@ Interact with MySQL using natural language:
    	* `list_users`: Use this tool to list users in a given project and location.
     * `wait_for_operation`: Use this tool to poll the operations API until the operation is done.
 
-*   **Data:**
+* **Data:**
     *  `list_tables`: Use this tool to list tables and descriptions.
     *  `execute_sql`: Use this tool to execute any SQL statement.
     *  `get_query_plan`: Use this tool to generate an execution plan.
