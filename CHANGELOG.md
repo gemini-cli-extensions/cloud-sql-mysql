@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.2...0.1.3) (2025-10-17)
+
+
+### Bug Fixes
+
+* update context for install instructions ([#47](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/47)) ([3afaa60](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3afaa601ef8a55cd051563fb9833c0adce96032d))
+
 ## [0.1.2](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.1...0.1.2) (2025-10-13)
 
 
