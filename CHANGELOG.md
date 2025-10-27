@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.3...0.1.4) (2025-10-27)
+
+### Bug Fixes
+
+* **sources/mysql:** Escape mysql user agent ([#1707](https://redirect.github.com/googleapis/genai-toolbox/issues/1707)) ([eeb694c](https://redirect.github.com/googleapis/genai-toolbox/commit/eeb694c20facc40a38bfa67073c4cb1f3dd657ff)) ([05248f0](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/05248f0c43238ed98d7fa66031320624e86df9aa))
+* **sources/mysql:** Escape program\_name for MySQL ([#1717](https://redirect.github.com/googleapis/genai-toolbox/issues/1717)) ([02f7f8a](https://redirect.github.com/googleapis/genai-toolbox/commit/02f7f8af979057efe99fd138cb1b958130355b68)) ([05248f0](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/05248f0c43238ed98d7fa66031320624e86df9aa))
+
 ## [0.1.3](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.2...0.1.3) (2025-10-17)
 
 
