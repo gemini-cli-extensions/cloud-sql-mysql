@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.5...0.1.6) (2025-12-08)
+
+
+### Features
+
+* **prebuilt/cloud-sql:** Add clone instance tool for cloud sql ([genai-toolbox#​1845](https://redirect.github.com/googleapis/genai-toolbox/issues/1845)) ([5e43630](https://redirect.github.com/googleapis/genai-toolbox/commit/5e43630907aa2d7bc6818142483a33272eab060b)) ([438f03e](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/438f03e135d5e76e7d58e2a0a560d4fbd1cacdac))
+
 ## [0.1.5](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.4...0.1.5) (2025-11-18)
 
 
