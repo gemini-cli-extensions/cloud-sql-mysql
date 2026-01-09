@@ -53,8 +53,8 @@ export CLOUD_SQL_MYSQL_PROJECT="<your-gcp-project-id>"
 export CLOUD_SQL_MYSQL_REGION="<your-cloud-sql-region>"
 export CLOUD_SQL_MYSQL_INSTANCE="<your-cloud-sql-instance-id>"
 export CLOUD_SQL_MYSQL_DATABASE="<your-database-name>"
-export CLOUD_SQL_MYSQL_USER="<your-database-user>"
-export CLOUD_SQL_MYSQL_PASSWORD="<your-database-password>"
+export CLOUD_SQL_MYSQL_USER="<your-database-user>"  # Optional, defaults to IAM authentication
+export CLOUD_SQL_MYSQL_PASSWORD="<your-database-password>"  # Optional, defaults to IAM authentication
 export CLOUD_SQL_MYSQL_IP_TYPE="PUBLIC" # Optional: `PUBLIC`, `PRIVATE`, `PSC`. Defaults to `PUBLIC`.
 ```
 
