@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.7](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.6...0.1.7) (2026-01-09)
+
+
+### Features
+
+* **prebuilt/cloud-sql-mysql:** Update CSQL MySQL prebuilt tools to use IAM ([genai-toolbox#​2202](https://redirect.github.com/googleapis/genai-toolbox/issues/2202)) ([731a32e](https://redirect.github.com/googleapis/genai-toolbox/commit/731a32e5360b4d6862d81fcb27d7127c655679a8)) ([186293e](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/186293e1fcbe9bc576aeb360227e638c1df6d57a))
+* **source/cloudsqlmysql:** Add support for IAM authentication in Cloud SQL MySQL source ([genai-toolbox#​2050](https://redirect.github.com/googleapis/genai-toolbox/issues/2050)) ([af3d3c5](https://redirect.github.com/googleapis/genai-toolbox/commit/af3d3c52044bea17781b89ce4ab71ff0f874ac20)) ([186293e](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/186293e1fcbe9bc576aeb360227e638c1df6d57a))
+* **tools/mysql-get-query-plan:** Add new `mysql-get-query-plan` tool for MySQL source ([genai-toolbox#​2123](https://redirect.github.com/googleapis/genai-toolbox/issues/2123)) ([0641da0](https://redirect.github.com/googleapis/genai-toolbox/commit/0641da0353857317113b2169e547ca69603ddfde)) ([186293e](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/186293e1fcbe9bc576aeb360227e638c1df6d57a))
+
+
+### Bug Fixes
+
+* List tables tools null fix ([genai-toolbox#​2107](https://redirect.github.com/googleapis/genai-toolbox/issues/2107)) ([2b45266](https://redirect.github.com/googleapis/genai-toolbox/commit/2b452665983154041d4cd0ed7d82532e4af682eb)) ([186293e](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/186293e1fcbe9bc576aeb360227e638c1df6d57a))
+
 ## [0.1.6](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.5...0.1.6) (2025-12-08)
 
 
