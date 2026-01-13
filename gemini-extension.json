@@ -17,16 +17,45 @@
         "--prebuilt",
         "cloud-sql-mysql",
         "--stdio"
-      ],
-      "env": {
-        "CLOUD_SQL_MYSQL_PROJECT": "${CLOUD_SQL_MYSQL_PROJECT}",
-        "CLOUD_SQL_MYSQL_REGION": "${CLOUD_SQL_MYSQL_REGION}",
-        "CLOUD_SQL_MYSQL_INSTANCE": "${CLOUD_SQL_MYSQL_INSTANCE}",
-        "CLOUD_SQL_MYSQL_DATABASE": "${CLOUD_SQL_MYSQL_DATABASE}",
-        "CLOUD_SQL_MYSQL_USER": "${CLOUD_SQL_MYSQL_USER}",
-        "CLOUD_SQL_MYSQL_PASSWORD": "${CLOUD_SQL_MYSQL_PASSWORD}"
-      }
+      ]
     }
   },
-  "contextFileName": "CLOUD-SQL-MYSQL.md"
+  "contextFileName": "CLOUD-SQL-MYSQL.md",
+  "settings": [
+    {
+      "name": "Project ID",
+      "description": "ID of the Google Cloud project",
+      "envVar": "CLOUD_SQL_MYSQL_PROJECT"
+    },
+    {
+      "name": "Region",
+      "description": "Region of the Cloud SQL instance",
+      "envVar": "CLOUD_SQL_MYSQL_REGION"
+    },
+    {
+      "name": "Instance ID",
+      "description": "ID of the Cloud SQL instance",
+      "envVar": "CLOUD_SQL_MYSQL_INSTANCE"
+    },
+    {
+      "name": "Database Name",
+      "description": "Name of the database",
+      "envVar": "CLOUD_SQL_MYSQL_DATABASE"
+    },
+    {
+      "name": "User",
+      "description": "Username of the database user",
+      "envVar": "CLOUD_SQL_MYSQL_USER"
+    },
+    {
+      "name": "Password",
+      "description": "Password of the database user",
+      "envVar": "CLOUD_SQL_MYSQL_PASSWORD"
+    },
+    {
+      "name": "IP Type",
+      "description": "(Optional) Type of the IP address (PUBLIC or PRIVATE)",
+      "envVar": "CLOUD_SQL_MYSQL_IP_TYPE"
+    }
+  ]
 }
