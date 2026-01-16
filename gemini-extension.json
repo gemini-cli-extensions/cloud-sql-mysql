@@ -44,12 +44,12 @@
     },
     {
       "name": "User",
-      "description": "Username of the database user",
+      "description": "(Optional) Username of the database user",
       "envVar": "CLOUD_SQL_MYSQL_USER"
     },
     {
       "name": "Password",
-      "description": "Password of the database user",
+      "description": "(Optional) Password of the database user",
       "envVar": "CLOUD_SQL_MYSQL_PASSWORD"
     },
     {
