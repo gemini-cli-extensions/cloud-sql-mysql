@@ -29,7 +29,7 @@
     },
     {
       "name": "Region",
-      "description": "Region for the Cloud SQL instance",
+      "description": "Region of the Cloud SQL instance",
       "envVar": "CLOUD_SQL_MYSQL_REGION"
     },
     {
