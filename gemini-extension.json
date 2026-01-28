@@ -51,7 +51,7 @@
       "name": "Password",
       "description": "(Optional) Password of the database user (Default: IAM user)",
       "envVar": "CLOUD_SQL_MYSQL_PASSWORD",
-      "sensitive": true,
+      "sensitive": true
     },
     {
       "name": "IP Type",
