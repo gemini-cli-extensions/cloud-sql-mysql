@@ -49,10 +49,10 @@ You will be prompted to configure the following settings during installation. Th
 
 *   `CLOUD_SQL_MYSQL_PROJECT`: The GCP project ID.
 *   `CLOUD_SQL_MYSQL_REGION`: The region of your Cloud SQL instance.
-*   `CLOUD_SQL_MYSQL_INSTANCE`: The ID of your Cloud SQL instance.
+*   `CLOUD_SQL_MYSQL_INSTANCE`: The name of your Cloud SQL instance.
 *   `CLOUD_SQL_MYSQL_DATABASE`: The name of the database to connect to.
 *   `CLOUD_SQL_MYSQL_USER`: (Optional) The database username. Defaults to the active IAM user.
-*   `CLOUD_SQL_MYSQL_PASSWORD`: (Optional) The password for the database user.
+*   `CLOUD_SQL_MYSQL_PASSWORD`: (Optional) The password for the database user. Required if using CLOUD_SQL_MYSQL_USER. Defaults to the active IAM user.
 *   `CLOUD_SQL_MYSQL_IP_TYPE`: (Optional) Type of the IP address: `PUBLIC`, `PRIVATE`, or `PSC`. Defaults to `PUBLIC`.
 
 > [!NOTE]
