@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.8](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.7...0.1.8) (2026-01-30)
+
+
+### Features
+
+* add Configuration settings ([#83](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/83)) ([36d4433](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/36d443385c94d188f16d33e36a156cb7a0215b23))
+* **deps:** update dependency googleapis/genai-toolbox to v0.26.0 ([#84](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/84)) ([306aaa9](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/306aaa9c39c0834528efd3728ee6f3056ef6ea5d))
+
 ## [0.1.7](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.6...0.1.7) (2026-01-09)
 
 
