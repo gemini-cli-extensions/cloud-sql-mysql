@@ -117,12 +117,17 @@ Interact with MySQL using natural language:
 ## Supported Tools
 
 * **Admin:**
+    * `clone_instance`: Use this tool to creates a clone for an existing Cloud SQL for MySQL instance.
+    * `create_backup`: Use this tool to creates a backup on a Cloud SQL instance.
+    * `create_database`: Use this tool to creates a new database in a Cloud SQL instance.
    	* `create_instance`: Use this tool to create an Postgres instance.
    	* `create_user`: Use this tool to create Postgres-BUILT-IN or IAM-based users.
    	* `get_instance`: Use this tool to get details about an Postgres instance.
    	* `get_user`: Use this tool to get details about a user.
+    * `list_databases`: Use this tool to lists all databases for a Cloud SQL instance.
    	* `list_instances`: Use this tool to list instances in a given project and location.
    	* `list_users`: Use this tool to list users in a given project and location.
+    * `restore_backup`: Use this tool to restores a backup of a Cloud SQL instance.
     * `wait_for_operation`: Use this tool to poll the operations API until the operation is done.
 
 * **Data:**
