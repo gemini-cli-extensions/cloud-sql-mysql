@@ -45,8 +45,32 @@ gemini extensions install https://github.com/gemini-cli-extensions/cloud-sql-mys
 
 ### Configuration
 
-Set the following environment variables before starting the Gemini CLI. These variables can be loaded from a `.env` file.
-This configuration is not required if utilizing the [Admin toolset](#supported-tools).
+You will be prompted to configure the following settings during installation. These settings are saved in an `.env` file within the extension's directory.
+
+*   `CLOUD_SQL_MYSQL_PROJECT`: The GCP project ID.
+*   `CLOUD_SQL_MYSQL_REGION`: The region of your Cloud SQL instance.
+*   `CLOUD_SQL_MYSQL_INSTANCE`: The name of your Cloud SQL instance.
+*   `CLOUD_SQL_MYSQL_DATABASE`: The name of the database to connect to.
+*   `CLOUD_SQL_MYSQL_USER`: (Optional) The database username. Defaults to the active IAM user.
+*   `CLOUD_SQL_MYSQL_PASSWORD`: (Optional) The password for the database user. Required if using CLOUD_SQL_MYSQL_USER. Defaults to the active IAM user.
+*   `CLOUD_SQL_MYSQL_IP_TYPE`: (Optional) Type of the IP address: `PUBLIC`, `PRIVATE`, or `PSC`. Defaults to `PUBLIC`.
+
+> [!NOTE]
+> This configuration is primarily for the Data Plane tools (querying). The Admin toolset does not strictly require these to be pre-set if you provide them in your prompts, but it is recommended for a smoother experience.
+
+To view or update your configuration:
+
+**List Settings:**
+*   Terminal: `gemini extensions list`
+*   Gemini CLI: `/extensions list`
+
+**Update Settings:**
+*   Terminal: `gemini extensions config cloud-sql-mysql [setting name] [--scope <scope>]`
+    *   `setting name`: (Optional) The single setting to configure.
+    *   `scope`: (Optional) The scope of the setting in (`user` or `workspace`). Defaults to `user`.
+*   Currently, you must restart the Gemini CLI for changes to take effect. We recommend using `gemini --resume` to resume your session.
+
+Alternatively, you can manually set these environment variables before starting the Gemini CLI:
 
 ```bash
 export CLOUD_SQL_MYSQL_PROJECT="<your-gcp-project-id>"
@@ -58,10 +82,10 @@ export CLOUD_SQL_MYSQL_PASSWORD="<your-database-password>"  # Optional, defaults
 export CLOUD_SQL_MYSQL_IP_TYPE="PUBLIC" # Optional: `PUBLIC`, `PRIVATE`, `PSC`. Defaults to `PUBLIC`.
 ```
 
-Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
-
 > [!NOTE]
-> If your Cloud SQL for MySQL instance uses private IPs, you must run Gemini CLI in the same Virtual Private Cloud (VPC) network.
+> * Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
+> * If your Cloud SQL for MySQL instance uses private IPs, you must run Gemini CLI in the same Virtual Private Cloud (VPC) network.
+> * See [Troubleshooting](#troubleshooting) for debugging your configuration.
 
 ### Start Gemini CLI
 
@@ -93,12 +117,17 @@ Interact with MySQL using natural language:
 ## Supported Tools
 
 * **Admin:**
+    * `clone_instance`: Use this tool to creates a clone for an existing Cloud SQL for MySQL instance.
+    * `create_backup`: Use this tool to creates a backup on a Cloud SQL instance.
+    * `create_database`: Use this tool to creates a new database in a Cloud SQL instance.
    	* `create_instance`: Use this tool to create an Postgres instance.
    	* `create_user`: Use this tool to create Postgres-BUILT-IN or IAM-based users.
    	* `get_instance`: Use this tool to get details about an Postgres instance.
    	* `get_user`: Use this tool to get details about a user.
+    * `list_databases`: Use this tool to lists all databases for a Cloud SQL instance.
    	* `list_instances`: Use this tool to list instances in a given project and location.
    	* `list_users`: Use this tool to list users in a given project and location.
+    * `restore_backup`: Use this tool to restores a backup of a Cloud SQL instance.
     * `wait_for_operation`: Use this tool to poll the operations API until the operation is done.
 
 * **Data:**
