@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.9](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.8...0.1.9) (2026-02-24)
+
+
+### Bug Fixes
+
+* remove broken keychain support for password ([#98](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/98)) ([0e0db45](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/0e0db45d816bd61bcd0065b773f307935544b565))
+
 ## [0.1.8](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.7...0.1.8) (2026-01-30)
 
 
