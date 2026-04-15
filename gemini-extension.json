@@ -2,24 +2,6 @@
   "name": "cloud-sql-mysql",
   "version": "0.1.9",
   "description": "Connect and interact with a Cloud SQL for MySQL database and data",
-  "mcpServers": {
-    "cloud_sql_mysql_admin": {
-      "command": "${extensionPath}${/}toolbox",
-      "args": [
-        "--prebuilt",
-        "cloud-sql-mysql-admin",
-        "--stdio"
-      ]
-    },
-    "cloud_sql_mysql": {
-      "command": "${extensionPath}${/}toolbox",
-      "args": [
-        "--prebuilt",
-        "cloud-sql-mysql",
-        "--stdio"
-      ]
-    }
-  },
   "contextFileName": "CLOUD-SQL-MYSQL.md",
   "settings": [
     {
