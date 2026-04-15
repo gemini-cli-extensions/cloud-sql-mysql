@@ -250,7 +250,7 @@ The following skills are available in this repository:
 Find additional skills to support your entire software development lifecycle at [github.com/gemini-cli-extensions](https://github.com/gemini-cli-extensions), including:
 
 - [Generic MySQL skills](https://github.com/gemini-cli-extensions/mysql)
-- [Cloud SQL for MySQL Observability skills](https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability)
+- [Cloud SQL for MySQL Observability extension](https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability)
 - and more!
 
 ## Troubleshooting
