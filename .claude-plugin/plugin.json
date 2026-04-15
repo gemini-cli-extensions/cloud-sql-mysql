@@ -45,7 +45,7 @@
       "title": "Database Password",
       "description": "(Optional) Password of the database user (Default: IAM user)",
       "type": "string",
-      "sensitive": true
+      "sensitive": false
     },
     "cloud_sql_mysql_ip_type": {
       "title": "IP Type",
