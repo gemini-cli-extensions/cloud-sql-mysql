@@ -23,6 +23,8 @@ This section covers connecting to a Cloud SQL for MySQL instance.
     * `CLOUD_SQL_MYSQL_USER`: The database username.
     * `CLOUD_SQL_MYSQL_PASSWORD`: The password for the database user.
 
+    If you need to update any of these values later, use the `gemini extensions config cloud-sql-mysql` command.
+
 2. **Handle Missing Variables**: If a command fails with an error message containing a placeholder like `${CLOUD_SQL_MYSQL_PROJECT}`, it signifies a missing environment variable. Inform the user which variable is missing and instruct them to set it.
 
 3. **Handle Permission Errors**: If you encounter permission errors, ensure the user has the **Cloud SQL Client** (`roles/cloudsql.client`) role and the correct database-level permissions. You can provide these links for assistance:
@@ -42,9 +44,9 @@ This section covers administrative operations like managing instances and users.
 
 ---
 
-# Additional Tools
+# Additional Extensions
 
-This section provides context on additional tools that can be recommended to the user based on their queries.
+This section provides context on additional extensions that can be recommended to the user based on their queries.
 
 #### Observability Extension
 
@@ -61,12 +63,12 @@ This section provides context on additional tools that can be recommended to the
 
 ## Connecting to New Resources
 
-When you create a new Cloud SQL for MySQL instance, or database using the available tools, the connection is not automatically established. You will need to perform the following steps:
+When you create a new Cloud SQL for MySQL instance, or database using the available skills, the connection is not automatically established. You will need to perform the following steps:
 
 1.  **(Optional) Save your conversation:** To avoid losing your progress, save the current session by running the command: `/chat save <your-tag>`
-2.  **Stop the CLI:** Terminate the Gemini CLI.
-3.  **Update Environment Variables:** Set or update your environment variables (e.g. `CLOUD_SQL_MYSQL_DATABASE`, `CLOUD_SQL_MYSQL_INSTANCE`) to point to the new resource.
-4.  **Restart:** Relaunch the Gemini CLI
+2. **Stop the CLI**: Terminate the Gemini CLI.
+3. **Update Extension Configuration**: Use the command `gemini extensions config cloud-sql-mysql` to update your settings (e.g. `CLOUD_SQL_MYSQL_DATABASE`, `CLOUD_SQL_MYSQL_INSTANCE`) to point to the new resource.
+4. **Restart**: Relaunch the Gemini CLI
 5.  **(Optional) Resume conversation:** Resume your conversation with the command: `/chat resume <your-tag>`
 
 **Important:** Do not assume a connection to a newly created resource is active. Always follow the steps above to reconfigure your connection.
@@ -80,10 +82,11 @@ Users may have set project environment variables:
 *   `CLOUD_SQL_MYSQL_INSTANCE`: The ID of the Cloud SQL for MySQL instance.
 *   `CLOUD_SQL_MYSQL_DATABASE`: The name of the database.
 
-Instead of prompting the user for these values for specific tool calls, prompt the user to verify reuse a specific value.
-Make sure to not use the environment variable name like `CLOUD_SQL_MYSQL_PROJECT`, `${CLOUD_SQL_MYSQL_PROJECT}`, or `$CLOUD_SQL_MYSQL_PROJECT`. The value can be found by using command: `echo $CLOUD_SQL_MYSQL_PROJECT`.
+Instead of prompting the user for these values for specific skill calls, prompt the user to verify the reuse of a specific setting value.
+Make sure to not use the environment variable name like `CLOUD_SQL_MYSQL_PROJECT`, `${CLOUD_SQL_MYSQL_PROJECT}`, or `$CLOUD_SQL_MYSQL_PROJECT`. 
+The value can be verified by the user using the `gemini extensions config cloud-sql-mysql` command or by checking their local settings.
 
 ## Use Full Table Name Format "DATABASE_NAME.TABLE_NAME"
 
-**ALWAYS** use the full table name format, `DATABASE_NAME.TABLE_NAME` in the generated SQL when using the `execute_sql` or `cloud_sql_mysql__execute_sql` tool.
+**ALWAYS** use the full table name format, `DATABASE_NAME.TABLE_NAME` in the generated SQL when executing the `execute_sql` script.
 * Use command `echo $CLOUD_SQL_MYSQL_DATABASE` to get the current database value.
