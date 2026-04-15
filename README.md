@@ -48,6 +48,7 @@ Before you begin, ensure you have the following:
 - Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
 - IAM Permissions:
   - Cloud SQL Client (`roles/cloudsql.client`)
+  - Cloud SQL Viewer (`roles/cloudsql.viewer`)
   - Cloud SQL Admin (`roles/cloudsql.admin`)
 
 > [!NOTE]
