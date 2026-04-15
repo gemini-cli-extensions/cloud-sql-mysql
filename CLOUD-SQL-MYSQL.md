@@ -14,7 +14,7 @@ To install this extension, the Gemini CLI version must be v0.6.0 or above. The v
 
 This section covers connecting to a Cloud SQL for MySQL instance.
 
-1. **Extension Configuration**: This extension requires several settings (e.g., Project ID, Instance ID, Database Name, User, and Password). These values are gathered via prompts when you first install or link the extension:
+1. **Verify Environment Variables**: The extension requires the following environment variables to be set before the Gemini CLI is started:
 
     * `CLOUD_SQL_MYSQL_PROJECT`: The GCP project ID.
     * `CLOUD_SQL_MYSQL_REGION`: The region of your Cloud SQL instance.
