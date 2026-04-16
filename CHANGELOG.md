@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.2.0](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.9...0.2.0) (2026-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* add support for skills ([#111](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/111)) ([8da2132](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/8da213253d1acc7b69149ad88b02bff8627524f1))
+
+### Features
+
+* **skill:** Attach user agent metadata for generated skill ([mcp-toolbox#​2697](https://redirect.github.com/googleapis/mcp-toolbox/issues/2697)) ([9598a6a](https://redirect.github.com/googleapis/mcp-toolbox/commit/9598a6a32597b9c9abdb0f20c06d86a01b0d011f)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skill:** Update skill generation logic ([mcp-toolbox#​2646](https://redirect.github.com/googleapis/mcp-toolbox/issues/2646)) ([c233eee](https://redirect.github.com/googleapis/mcp-toolbox/commit/c233eee98cd9621526cb286245f3874f5bd6e7da)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skills:** Add Claude Code support to generated scripts ([mcp-toolbox#​2966](https://redirect.github.com/googleapis/mcp-toolbox/issues/2966)) ([a1609e1](https://redirect.github.com/googleapis/mcp-toolbox/commit/a1609e10a2eaf4ea68eae36acec3eed355b8a052)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skills:** Add codex user agent ([mcp-toolbox#​2973](https://redirect.github.com/googleapis/mcp-toolbox/issues/2973)) ([070e939](https://redirect.github.com/googleapis/mcp-toolbox/commit/070e9399c02f088d43175ce6bf343378beb7f584)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skills:** Tool invocation via npx ([mcp-toolbox#​2916](https://redirect.github.com/googleapis/mcp-toolbox/issues/2916)) ([377dc5b](https://redirect.github.com/googleapis/mcp-toolbox/commit/377dc5b00145a0044eef39314dd6b0ef5966fcd7)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **tools/mysql:** Add list-table-stats-tool to list table statistics in MySQL and Cloud SQL MySQL source. ([mcp-toolbox#​2938](https://redirect.github.com/googleapis/mcp-toolbox/issues/2938)) ([dc2c2b4](https://redirect.github.com/googleapis/mcp-toolbox/commit/dc2c2b44e512e34d4d3a0b9c63b59374c37c4c4a)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* add claude code plugin config ([#113](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/113)) ([7a8c918](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/7a8c9181a69bf45e66be13014d53f2377a085f8b))
+* add codex plugin config ([#114](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/114)) ([0d41575](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/0d41575abb5717f87349c95a16ccdbd7eabf5965))
+
+### Bug Fixes
+
+* **skill:** Fix env variable propagation ([mcp-toolbox#​2645](https://redirect.github.com/googleapis/mcp-toolbox/issues/2645)) ([5271368](https://redirect.github.com/googleapis/mcp-toolbox/commit/52713687208994c423da64333cb0a04fb483f794)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skills:** Fix integer parameter parsing through agent skills ([mcp-toolbox#​2847](https://redirect.github.com/googleapis/mcp-toolbox/issues/2847)) ([4564efe](https://redirect.github.com/googleapis/mcp-toolbox/commit/4564efe75436b4081d9f3d1f7c912bc64c13f850)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skills:** Fix skill generation template ([mcp-toolbox#​2914](https://redirect.github.com/googleapis/mcp-toolbox/issues/2914)) ([a01a15e](https://redirect.github.com/googleapis/mcp-toolbox/commit/a01a15ed1aa9a83eda8362578fed2e3a3c8dde99)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+* **skills:** Prevent empty strings overriding optional env vars in node scripts ([mcp-toolbox#​2963](https://redirect.github.com/googleapis/mcp-toolbox/issues/2963)) ([c52adeb](https://redirect.github.com/googleapis/mcp-toolbox/commit/c52adeba76fc13d0e6e415f6393def0648e478d6)) ([3797d44](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/3797d44030cb12e4502367ed9e34c849db8e3db5))
+
+
 ## [0.1.9](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.8...0.1.9) (2026-02-24)
 
 
