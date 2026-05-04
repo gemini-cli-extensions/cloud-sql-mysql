@@ -17,7 +17,7 @@
     {
       "id": "cloud-sql-schema-tables-explore",
       "starting_prompt": "I want to understand the structure of my database.",
-      "conversation_plan": "First, ask the agent to list the databases in the instance. After the agent provides the databases, ask it to list the tables specifically for the database.",
+      "conversation_plan": "First, ask the agent to list the databases in the instance. After the agent provides the databases, ask it to list the tables specifically for that database.",
       "expected_trajectory": [
         "list_databases",
         "list_tables"
