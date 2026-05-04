@@ -46,8 +46,8 @@ steps:
         PR_TITLE=$(echo "$$PR_DATA" | jq -r '.title')
 
         # Check if execution labels are present
-        if [[ "$$PR_LABELS" != *"autorelease: pending"* && "$$PR_LABELS" != *"evals"* ]]; then
-          echo "PR does not have 'autorelease: pending' or 'evals' label. Skipping execution."
+        if [[ "$$PR_LABELS" != *"autorelease: pending"* && "$$PR_LABELS" != *"ci:run-evals"* ]]; then
+          echo "PR does not have 'autorelease: pending' or 'ci:run-evals' label. Skipping execution."
           exit 0
         fi
         echo "Execution label detected. Processing release version context..."
@@ -60,7 +60,7 @@ steps:
             export RELEASE_VERSION="pr-$_PR_NUMBER-release-unknown"
           fi
         else
-          export RELEASE_VERSION="pr-$_PR_NUMBER-evals"
+          export RELEASE_VERSION="pr-$_PR_NUMBER-ci-run-evals"
         fi
 
         # Workaround for evalbench bug: settings are only applied if path basename matches extension ID
