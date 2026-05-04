@@ -100,7 +100,7 @@ steps:
 
 availableSecrets:
   secretManager:
-  - versionName: projects/$PROJECT_ID/secrets/daily-ci-evals-db-password/versions/latest
+  - versionName: projects/$PROJECT_ID/secrets/MYSQL_DB_PASSWORD/versions/latest
     env: 'MYSQL_DB_PASSWORD'
   - versionName: projects/$PROJECT_ID/secrets/GITHUB_TOKEN/versions/latest
     env: 'GITHUB_TOKEN'
