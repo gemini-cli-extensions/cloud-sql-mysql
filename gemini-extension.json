@@ -1,6 +1,6 @@
 {
   "name": "cloud-sql-mysql",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Connect and interact with a Cloud SQL for MySQL database and data",
   "contextFileName": "CLOUD-SQL-MYSQL.md",
   "settings": [
