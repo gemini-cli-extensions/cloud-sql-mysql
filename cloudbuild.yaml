@@ -1,0 +1,106 @@
+# Copyright 2025 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+
+  # --- Evaluation Step ---
+  - name: 'us-central1-docker.pkg.dev/cloud-db-nl2sql/evalbench/eval_server:latest'
+    entrypoint: 'bash'
+    # Decrypts the secret from Secret Manager into the MYSQL_DB_PASSWORD environment variable
+    secretEnv: ['MYSQL_DB_PASSWORD', 'GITHUB_TOKEN']
+    args:
+      - '-c'
+      - |
+        set -e
+
+        echo "Fetching PR data from GitHub API..."
+
+        # Fetch PR data and status code
+        HTTP_STATUS=$(curl -s -o pr_data.json -w "%{http_code}" -H "Authorization: token $$GITHUB_TOKEN" \
+          "https://api.github.com/repos/$REPO_FULL_NAME/pulls/$_PR_NUMBER")
+
+        if [ "$$HTTP_STATUS" -ne 200 ]; then
+          echo "Error fetching PR data: HTTP $$HTTP_STATUS"
+          cat pr_data.json
+          exit 1
+        fi
+
+        PR_DATA=$(cat pr_data.json)
+
+        # Extract labels and title from PR data (Use $$ to escape bash variables)
+        PR_LABELS=$(echo "$$PR_DATA" | jq -r '[.labels[].name] | join(",")')
+        PR_TITLE=$(echo "$$PR_DATA" | jq -r '.title')
+
+        # Check if execution labels are present
+        if [[ "$$PR_LABELS" != *"autorelease: pending"* && "$$PR_LABELS" != *"evals"* ]]; then
+          echo "PR does not have 'autorelease: pending' or 'evals' label. Skipping execution."
+          exit 0
+        fi
+        echo "Execution label detected. Processing release version context..."
+
+        # Determine Release Version based on branch name
+        if [[ "$_HEAD_BRANCH" == release-please-* ]]; then
+          if [[ "$$PR_TITLE" =~ release\ ([0-9]+\.[0-9]+\.[0-9]+) ]]; then
+            export RELEASE_VERSION="$${BASH_REMATCH[1]}"
+          else
+            export RELEASE_VERSION="pr-$_PR_NUMBER-release-unknown"
+          fi
+        else
+          export RELEASE_VERSION="pr-$_PR_NUMBER-evals"
+        fi
+
+        # Workaround for evalbench bug: settings are only applied if path basename matches extension ID
+        ln -s /workspace /workspace/cloud-sql-mysql
+        cd /evalbench
+
+        # evalbench specific environment variables
+        export EVAL_GCP_PROJECT_ID=$PROJECT_ID
+        export EVAL_GCP_PROJECT_REGION=$_CLOUD_SQL_REGION
+        export EVAL_REPORTING_PROJECT=$_EVAL_REPORTING_PROJECT
+        export GOOGLE_CLOUD_PROJECT=$PROJECT_ID
+
+        # Cloud SQL MySQL specific environment variables
+        export CLOUD_SQL_MYSQL_PROJECT=$PROJECT_ID
+        export CLOUD_SQL_MYSQL_INSTANCE=$_CLOUD_SQL_INSTANCE
+        export CLOUD_SQL_MYSQL_REGION=$_CLOUD_SQL_REGION
+        export CLOUD_SQL_MYSQL_DATABASE=$_CLOUD_SQL_DATABASE
+        export CLOUD_SQL_MYSQL_USER=$_CLOUD_SQL_USER
+        export CLOUD_SQL_MYSQL_IP_TYPE=$_CLOUD_SQL_IP_TYPE
+
+        # Maps the decrypted MYSQL_DB_PASSWORD to the exact variable expected by gemini_cli and extension skills
+        export CLOUD_SQL_MYSQL_PASSWORD=$$MYSQL_DB_PASSWORD
+
+        # Combine CI metadata with run config
+        cat /workspace/evals/ci_metadata.yaml >> /workspace/evals/run_config.yaml
+
+        # Substitute environment variables in model_config.yaml
+        python3 /workspace/evals/substitute_env.py
+
+        cd /evalbench
+        export PYTHONPATH=./evalbench:./evalbench/evalproto
+        export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
+        echo "Launching Standalone Evaluation..."
+        python3 evalbench/evalbench.py --experiment_config=/workspace/evals/run_config.yaml
+
+
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_ID/secrets/daily-ci-evals-db-password/versions/latest
+    env: 'MYSQL_DB_PASSWORD'
+  - versionName: projects/$PROJECT_ID/secrets/GITHUB_TOKEN/versions/latest
+    env: 'GITHUB_TOKEN'
