@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.2.0...0.2.1) (2026-05-11)
+
+
+### Features
+
+* add Cloud Build pipeline and evaluation configuration for Cloud SQL MySQL extension ([#119](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/119)) ([fdf3cc6](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/fdf3cc6e47df9a6db74e61b1342031b590dca6bb))
+
 ## [0.2.0](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.9...0.2.0) (2026-04-16)
 
 
