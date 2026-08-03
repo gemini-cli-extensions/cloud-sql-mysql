@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cloud-sql-mysql",
   "version": "0.2.0",
   "description": "Connect and interact with a Cloud SQL for MySQL database and data.",
@@ -7,7 +8,11 @@
     "email": "data-cloud-ai-integrations@google.com"
   },
   "homepage": "https://cloud.google.com/sql",
-  "license": "Apache-2.0",
   "repository": "https://github.com/gemini-cli-extensions/cloud-sql-mysql",
-  "skills": "./skills/"
+  "license": "Apache-2.0",
+  "keywords": [
+    "cloud-sql",
+    "mysql",
+    "database"
+  ]
 }
