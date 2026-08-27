@@ -14,5 +14,65 @@
     "cloud-sql",
     "mysql",
     "database"
-  ]
+  ],
+  "extensions": {
+    "com.google.cloud.data.agent-plugins": {
+      "config": [
+        {
+          "key": "CLOUD_SQL_MYSQL_PROJECT",
+          "title": "Project ID",
+          "description": "ID of the Google Cloud project"
+        },
+        {
+          "key": "CLOUD_SQL_MYSQL_REGION",
+          "title": "Region",
+          "description": "Region of the Cloud SQL instance"
+        },
+        {
+          "key": "CLOUD_SQL_MYSQL_INSTANCE",
+          "title": "Instance",
+          "description": "Name of the Cloud SQL instance"
+        },
+        {
+          "key": "CLOUD_SQL_MYSQL_DATABASE",
+          "title": "Database",
+          "description": "Name of the database"
+        },
+        {
+          "key": "CLOUD_SQL_MYSQL_USER",
+          "title": "User",
+          "description": "(Optional) Username of the database user (Default: IAM user)"
+        },
+        {
+          "key": "CLOUD_SQL_MYSQL_PASSWORD",
+          "title": "Password",
+          "description": "(Optional) Password of the database user (Default: IAM user)"
+        },
+        {
+          "key": "CLOUD_SQL_MYSQL_IP_TYPE",
+          "title": "IP Type",
+          "description": "(Optional) Type of the IP address: PUBLIC, PRIVATE, or PSC (Default: Public)"
+        }
+      ],
+      "gemini": {
+        "mcpServerName": "cloud-sql-mysql",
+        "contextFileName": "CLOUD-SQL-MYSQL.md"
+      },
+      "codex": {
+        "interface": {
+          "displayName": "Cloud SQL for MySQL",
+          "shortDescription": "Interact with CloudSQL for MySQL instances.",
+          "developerName": "Google LLC",
+          "category": "Database",
+          "capabilities": [
+            "Read",
+            "Write"
+          ],
+          "defaultPrompt": [
+            "You are a highly skilled database engineer and database administrator. Your purpose is to help the developer build and interact with databases and utilize data context throughout the entire software delivery cycle."
+          ]
+        }
+      }
+    }
+  }
 }
