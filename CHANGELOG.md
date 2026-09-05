@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.2.1](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.2.0...0.2.1) (2026-09-05)
+
+
+### Features
+
+* **auth:** Implement MCP auth tool-level scopes validation ([mcp-toolbox#​3049](https://redirect.github.com/googleapis/mcp-toolbox/issues/3049)) ([c528985](https://redirect.github.com/googleapis/mcp-toolbox/commit/c528985149060adb648f85b5486391bd72d6727e)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* **looker:** Propagate client IP from incoming MCP requests to downstream SDK calls ([mcp-toolbox#​3253](https://redirect.github.com/googleapis/mcp-toolbox/issues/3253)) ([75da6c2](https://redirect.github.com/googleapis/mcp-toolbox/commit/75da6c21dd29d7e8e70eac1b747e3946097e7459)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* add Cloud Build pipeline and evaluation configuration for Cloud SQL MySQL extension ([#119](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/119)) ([fdf3cc6](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/fdf3cc6e47df9a6db74e61b1342031b590dca6bb))
+* Add support for HTTPS/TLS listener ([mcp-toolbox#​3126](https://redirect.github.com/googleapis/mcp-toolbox/issues/3126)) ([8bc385d](https://redirect.github.com/googleapis/mcp-toolbox/commit/8bc385d7d6fd9ed2ad13503d9feb503de0b512b1)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* **plugin:** migrate from generated skills to the prebuilt MCP server ([#136](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/136)) ([ed4fbfe](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/ed4fbfe3e0cb6770b15b2a66bd1192a684547678))
+* **plugin:** support agent plugin spec ([#135](https://github.com/gemini-cli-extensions/cloud-sql-mysql/issues/135)) ([066a373](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/066a3737218d7e54ce0b28e25584c1ed446361eb))
+* Setup SQLCommenter and allow client metadata  ([mcp-toolbox#​3064](https://redirect.github.com/googleapis/mcp-toolbox/issues/3064)) ([9f1f9b3](https://redirect.github.com/googleapis/mcp-toolbox/commit/9f1f9b321dcd05cce55dbff1bbaebfc44a4c9907)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+
+
+### Bug Fixes
+
+* **auth/generic:** Fix generic auth expiration field and integration with `authRequired` ([mcp-toolbox#​3251](https://redirect.github.com/googleapis/mcp-toolbox/issues/3251)) ([f4d16c0](https://redirect.github.com/googleapis/mcp-toolbox/commit/f4d16c09b12c4d3297a9aedca706c9830382a4e3)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* **mcp:** Implement router-level logger injection for MCP auth ([mcp-toolbox#​3067](https://redirect.github.com/googleapis/mcp-toolbox/issues/3067)) ([ccc7cf5](https://redirect.github.com/googleapis/mcp-toolbox/commit/ccc7cf5ee8a1bacb6b57faf41ae5a1cc3da5299e)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* **tools:** Initialize query result slices to empty array ([mcp-toolbox#​3250](https://redirect.github.com/googleapis/mcp-toolbox/issues/3250)) ([60ddf48](https://redirect.github.com/googleapis/mcp-toolbox/commit/60ddf487468bfd11c7f9346f16a33a8986f89f84)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* Allow converting string literal block with list ([mcp-toolbox#​3050](https://redirect.github.com/googleapis/mcp-toolbox/issues/3050)) ([36ab2a9](https://redirect.github.com/googleapis/mcp-toolbox/commit/36ab2a98f9f2d03c27eea389d2281bfc4581ffa1)), closes [mcp-toolbox#​3023](https://redirect.github.com/googleapis/mcp-toolbox/issues/3023) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* Prevent test.db from being created during unit tests ([mcp-toolbox#​3042](https://redirect.github.com/googleapis/mcp-toolbox/issues/3042)) ([d10d2ca](https://redirect.github.com/googleapis/mcp-toolbox/commit/d10d2caeb7c9eda7d17d6dbd9f63363b2bc23a7a)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+* Remove hardcoded \* allowed origin for sse ([mcp-toolbox#​3054](https://redirect.github.com/googleapis/mcp-toolbox/issues/3054)) ([c4c7bd9](https://redirect.github.com/googleapis/mcp-toolbox/commit/c4c7bd917e686de68e2be866cfe3872c3439efae)) ([180673b](https://github.com/gemini-cli-extensions/cloud-sql-mysql/commit/180673b26d2ceac50978ff1a82af0b071446b129))
+
 ## [0.2.0](https://github.com/gemini-cli-extensions/cloud-sql-mysql/compare/0.1.9...0.2.0) (2026-04-16)
 
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cloud-sql-mysql",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Connect and interact with a Cloud SQL for MySQL database and data.",
   "author": {
     "name": "Google LLC",
