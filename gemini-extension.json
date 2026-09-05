@@ -1,7 +1,19 @@
 {
   "name": "cloud-sql-mysql",
   "version": "0.2.0",
-  "description": "Connect and interact with a Cloud SQL for MySQL database and data",
+  "description": "Connect and interact with a Cloud SQL for MySQL database and data.",
+  "mcpServers": {
+    "cloud-sql-mysql": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@toolbox-sdk/server@1.9.0",
+        "--prebuilt",
+        "cloud-sql-mysql",
+        "--stdio"
+      ]
+    }
+  },
   "contextFileName": "CLOUD-SQL-MYSQL.md",
   "settings": [
     {
